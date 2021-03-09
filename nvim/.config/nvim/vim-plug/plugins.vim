@@ -17,7 +17,9 @@ Plug 'artur-shaik/vim-javacomplete2'
 
 Plug 'chrisbra/csv.vim'
 
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
+
+Plug 'dense-analysis/ale'
 
 Plug 'frazrepo/vim-rainbow'
 
@@ -90,6 +92,9 @@ Plug 'tranvansang/octave.vim'
 
 Plug  'vimwiki/vimwiki'
 
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
+" let g:syntastic_python_checkers = ['pylint']
+
+" Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()

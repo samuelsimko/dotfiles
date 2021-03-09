@@ -7,6 +7,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 let mapleader = ' '
 let maplocalleader = "\\"
 
+set number
 set relativenumber
 
 set background=dark 
@@ -16,9 +17,6 @@ set nocompatible
 filetype plugin on
 syntax on
 
-
-"Disable Coc for python files
-autocmd FileType python let b:coc_suggest_disable = 1
 
 "Enable javacomplete for java files
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -30,6 +28,23 @@ fun GotoWindow(id)
     call win_gotoid(a:id)
     MaximizerToggle
 endfun
+
+
+" syntastic settings
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 1
+
+" Check Python files with flake8 and pylint.
+let b:ale_linters = ['flake8', 'pylint']
+" Fix Python files with autopep8 and yapf.
+let b:ale_fixers = ['autopep8', 'yapf']
+
+" Jump to definition
+nmap <silent> gd <Plug>(coc-definition)
 
 " Debugger remaps for Vimspector
 nnoremap <leader>m :MaximizerToggle!<CR>
