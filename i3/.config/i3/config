@@ -223,3 +223,6 @@ bindsym $mod+comma workspace prev
 
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
+
+# Screenshot the current window
+bindsym $mod+x exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
