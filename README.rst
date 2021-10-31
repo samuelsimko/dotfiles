@@ -10,7 +10,7 @@ environment and configure several preferred applications.
 
 - Editor: nvim
 - Shell: Zsh
-- Terminal: Termite
+- Terminal: Alacritty
 - Theme: Gruvbox
 - Window manager: i3wm
 
