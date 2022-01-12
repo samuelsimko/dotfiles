@@ -225,13 +225,16 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
 
 # Screenshot the current window
-bindsym $mod+x exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym $mod+x exec flameshot gui
 
-# open Telgram
+# Open Telgram
 bindsym $mod+t exec telegram-desktop
 
-# open Discord
+# Open Discord
 bindsym $mod+g exec Discord
 
-# open slack
+# Open Slack
 bindsym $mod+c exec slack
+
+# Switch to french keyboard
+bindsym $mod+y exec source ~/programs/french_keyboard.sh
