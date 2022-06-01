@@ -31,8 +31,8 @@ interval = 5
 
 [[block]]  # Fan speed and temperature
 block = "custom"
-interval = 1
-command = '''(cat /sys/class/thermal/thermal_zone0/temp | cut -c1-2; echo " "; cat /proc/acpi/ibm/fan | awk 'FNR == 2 {print $2}';) | tr -d '\n' '''
+interval = 10
+command = """sensors | grep 'CPU\\|fan1' | awk '{print $2};' | tr '\n' ' ' | sed 's/.$//'"""
 
 [[block]]
 block = "load"
@@ -44,10 +44,10 @@ block = "sound"
 
 [[block]]
 block = "battery"
-interval = 10
+interval = 15
 format = "{percentage}% {time}"
 
 [[block]]
 block = "time"
-interval = 1
+interval = 5
 format = "%a %d/%m %R"
